@@ -6,7 +6,7 @@
 
 ## Takım Elemanları
 
-|    | <div align="center">Name</div>  |
+|    | <div align="center">Name</div>   | <div align="center">Title</div>  | <div align="center">Socials</div>     |
 | :-----------: | :---------- | :---------- | :----------: |
 |   Burak Onur Silusu     | Scrum Master      | 
 |   Feyza Ayca Taskesen     | Developer     | 
