@@ -1,12 +1,12 @@
-# Imagine 4 - Mental Journey
+# Grup 49 - Mental Journey
 
 ## Takım İsmi
 
-**Imagine 4**
+**Mental Journey**
 
 ## Takım Elemanları
 
-|    | <div align="center">Name</div>   | <div align="center">Title</div>  | <div align="center">Socials</div>     |
+|    | <div align="center">Name</div>  |
 | :-----------: | :---------- | :---------- | :----------: |
 |   Burak Onur Silusu     | Scrum Master      | 
 |   Feyza Ayca Taskesen     | Developer     | 
