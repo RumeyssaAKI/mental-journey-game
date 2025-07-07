@@ -88,6 +88,9 @@ Günlük iletişim WhatsApp grubu üzerinden yürütüldü. Yazılı olarak fiki
 Tasarım ve geliştirme ayrıştırılarak, fikir süreci verimli ilerletildi.
 
 ---
+### Sprint board screenshotları
+![TrelloPlan](https://github.com/user-attachments/assets/cbca5c35-e754-4d25-a90c-4fdea247fa6b)
+
 
 ###  Proje Hazırlık Durumu  
 - **Oyun İsmi:** Mental Journey  
