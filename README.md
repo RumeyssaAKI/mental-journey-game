@@ -9,7 +9,7 @@
 |    | <div align="center">Name</div>   | <div align="center">Title</div>  | <div align="center">Socials</div>     |
 | :-----------: | :---------- | :---------- | :----------: |
 |   Burak Onur Silusu     | Scrum Master      | 
-|   Feyza Ayca Taskesen     | Developer     | 
+|   Feyza Ayca Taskesen     | Product Owner    | 
 |   Rumeysa Aki      | Developer      | 
 |   Enes Alyurt     | Developer     |  
 
@@ -64,3 +64,71 @@ Ana karakterimiz, zihninde bastırılmış anılar ve karmaşık duygusal düğ�
 - Basın ve YouTube/Twitch içerik üreticileriyle iş birlikleri  
 
 ---
+##  SPRINT 1
+
+### Sprint İçinde Tamamlanması Tahmin Edilen Puan  
+Sprint 1 için 8 puanlık iş planlandı ve başarıyla tamamlandı. Bu sprintte odak, projenin fikirsel temellerini oluşturmak ve üretim sürecine hazırlık yapmaktı.
+
+---
+
+###  Puan Tamamlama Mantığı  
+Toplam proje backlog’u yaklaşık 40 puan. Sprint 1 kapsamında tamamlanan işler:
+
+- Oyun Hikayesinin Oluşturulması (3 puan)  
+- Temel Konsept ve Tema Belirleme (2 puan)  
+- Örnek Asset Araştırmaları ve Referans Toplama (2 puan)  
+- Görev Dağılımı ve Ekip Yapısının Oluşturulması (1 puan)  
+
+**Toplam:** 8 puan
+
+---
+
+###  Daily Scrum  
+Günlük iletişim WhatsApp grubu üzerinden yürütüldü. Yazılı olarak fikir paylaşımı ve ilerleme raporlamaları yapıldı.  
+Tasarım ve geliştirme ayrıştırılarak, fikir süreci verimli ilerletildi.
+
+---
+
+###  Proje Hazırlık Durumu  
+- **Oyun İsmi:** Mental Journey  
+- **Tema:** Zihinsel sağlık, içsel keşif  
+- **Tür:** Hikaye odaklı puzzle/macera  
+- **Görsel Stil:** 3D Low-Poly  
+- **İlk Kararlar:** Haritalar duygusal bölümlere ayrılacak, metaforlar üzerinden anlatım yapılacak
+
+---
+
+###  Sprint Board  
+Sprint board için Trello/Notion yapısı hazırlandı. Görevler:
+- Karakter ve mekan için referans toplama  
+- Hikaye taslağının tamamlanması  
+- Ekip içi görev paylaşımı
+
+---
+
+###  Ürün Durumu  
+Henüz oynanabilir demo yok ancak:  
+- Örnek asset’ler belirlendi  
+- Low-poly referanslar toplandı  
+- İlk bölümün konsepti zihinsel labirent olarak şekillendi
+
+---
+
+###  Sprint Review  
+- Tema ve anlatım biçimi netleşti  
+- Takım içi rol dağılımı yapıldı  
+- Harita bölümleri duygularla ilişkilendirilecek  
+- Kullanıcıya anlatı vermeden sezgisel bulmaca tasarımı hedefleniyor
+
+
+---
+
+###  Sprint Retrospective
+
+- Takım içi rol dağılımı netleştirildi, görevler bireysel sorumluluklara göre planlandı.  
+- Tasarım ekibi ile ayrı bir toplantı yapılarak oyunun görsel dili (low-poly ve atmosferik stil) üzerinde uzlaşıldı.  
+- Hikaye yapısı tamamlandı ve bölümler duygu temalarına göre taslaklara ayrıldı.  
+- Referans asset araştırması tamamlandı; kullanılan kaynakların listesi oluşturuldu.  
+- İletişim ve proje takibi araçları (WhatsApp, Trello) aktif kullanıma başlandı.
+
+
