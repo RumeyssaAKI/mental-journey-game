@@ -4,12 +4,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
-
-    public Transform groundCheck;        // Aya??n alt?ndaki nokta
+    public Transform groundCheck;
     public float groundCheckRadius = 0.3f;
     public LayerMask groundLayer;
 
     private Rigidbody rb;
+    private int jumpCount = 0;
     private bool isGrounded;
 
     void Start()
@@ -19,34 +19,27 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Zemin kontrolü
+        // Yerde olup olmad???n? kontrol et
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
-        Debug.Log("isGrounded: " + isGrounded); // DEBUG
 
-        // Z?plama
-        if (Input.GetKeyDown(KeyCode.Space))
+        // E?er yere temas varsa, z?plama say?s?n? s?f?rla
+        if (isGrounded)
         {
-            Debug.Log("Space tu?una bas?ld?"); // DEBUG
-            if (isGrounded)
-            {
-                Debug.Log("Z?plama gerçekle?ti"); // DEBUG
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
-            }
-            else
-            {
-                Debug.Log("Havadas?n, z?playamazs?n"); // DEBUG
-            }
+            jumpCount = 0;
         }
-    }
 
-    void FixedUpdate()
-    {
-        // Hareket
+        // Space tu?una bas?ld???nda ve z?plama hakk? varsa z?pla
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            jumpCount++;
+        }
+
+        // Hareket kodu (iste?e göre düzenlenebilir)
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
-
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
-        rb.MovePosition(rb.position + move * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + move * moveSpeed * Time.deltaTime);
     }
 
     void OnDrawGizmosSelected()
