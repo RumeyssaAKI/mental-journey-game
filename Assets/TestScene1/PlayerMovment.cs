@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-
 
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 7f;
+
+    public Transform groundCheck;        // Aya??n alt?ndaki nokta
+    public float groundCheckRadius = 0.3f;
+    public LayerMask groundLayer;
+
     private Rigidbody rb;
     private bool isGrounded;
 
@@ -18,31 +19,42 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+        // Zemin kontrolü
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
+        Debug.Log("isGrounded: " + isGrounded); // DEBUG
 
-        Vector3 move = new Vector3(h, 0, v) * moveSpeed;
-        Vector3 velocity = rb.velocity;
-        velocity.x = move.x;
-        velocity.z = move.z;
-        rb.velocity = velocity;
-
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        // Z?plama
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            Debug.Log("Space tu?una bas?ld?"); // DEBUG
+            if (isGrounded)
+            {
+                Debug.Log("Z?plama gerçekle?ti"); // DEBUG
+                rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
+            }
+            else
+            {
+                Debug.Log("Havadas?n, z?playamazs?n"); // DEBUG
+            }
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void FixedUpdate()
     {
-        if (collision.gameObject.CompareTag("Ground"))
-            isGrounded = true;
+        // Hareket
+        float moveX = Input.GetAxis("Horizontal");
+        float moveZ = Input.GetAxis("Vertical");
+
+        Vector3 move = transform.right * moveX + transform.forward * moveZ;
+        rb.MovePosition(rb.position + move * moveSpeed * Time.fixedDeltaTime);
     }
 
-    void OnCollisionExit(Collision collision)
+    void OnDrawGizmosSelected()
     {
-        if (collision.gameObject.CompareTag("Ground"))
-            isGrounded = false;
+        if (groundCheck != null)
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
     }
 }
-
