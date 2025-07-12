@@ -2,45 +2,52 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushController : MonoBehaviour
+public class PushableInteraction : MonoBehaviour
 {
-    public float pushForce = 5f;
-    public float pushRange = 1.5f;
+    public float interactDistance = 2f;
     public LayerMask pushableLayer;
+    public Transform pushPoint;
 
-    private bool isPushMode = false;
+    private FixedJoint joint;
+    private Rigidbody currentBox;
 
     void Update()
     {
-        // M tu?u ile itme modu toggle
         if (Input.GetKeyDown(KeyCode.M))
         {
-            isPushMode = !isPushMode;
-            Debug.Log("Push mode: " + isPushMode);
-        }
-
-        if (isPushMode)
-        {
-            TryPushObject();
+            if (currentBox == null)
+                TryAttachBox();
+            else
+                DetachBox();
         }
     }
 
-    void TryPushObject()
+    void TryAttachBox()
     {
-        RaycastHit hit;
+        Collider[] hits = Physics.OverlapSphere(transform.position, interactDistance, pushableLayer);
 
-        // Karakterin önünde pushRange kadar Raycast gönder
-        Vector3 rayOrigin = transform.position + Vector3.up * 0.5f;  // biraz yukar?dan gönder
-        Vector3 rayDirection = transform.forward;
-
-        if (Physics.Raycast(rayOrigin, rayDirection, out hit, pushRange, pushableLayer))
+        if (hits.Length > 0)
         {
-            Rigidbody rb = hit.collider.attachedRigidbody;
-            if (rb != null)
+            Rigidbody boxRb = hits[0].attachedRigidbody;
+            if (boxRb != null)
             {
-                // ?tme kuvveti uygula
-                rb.AddForce(rayDirection * pushForce, ForceMode.Force);
+                currentBox = boxRb;
+
+                joint = gameObject.AddComponent<FixedJoint>();
+                joint.connectedBody = currentBox;
+                joint.autoConfigureConnectedAnchor = true;
+
+                Debug.Log("?? Kutuya ba?land?.");
             }
         }
+    }
+
+    void DetachBox()
+    {
+        if (joint != null)
+            Destroy(joint);
+
+        currentBox = null;
+        Debug.Log("? Kutu ba?lant?s? kesildi.");
     }
 }
