@@ -8,11 +8,14 @@ public class MentalHealth : MonoBehaviour
     public float maxMentalHealth = 100f;
     public float currentMentalHealth;
 
-    public Image healthBarFill; // UI'deki ye?il bar
+    public Image healthBarFill;
+
+    private PlayerRespawn respawn;
 
     void Start()
     {
         currentMentalHealth = maxMentalHealth;
+        respawn = GetComponent<PlayerRespawn>();
         UpdateHealthBar();
     }
 
@@ -24,17 +27,28 @@ public class MentalHealth : MonoBehaviour
 
         if (currentMentalHealth <= 0f)
         {
-            Debug.Log("Oyuncu öldü.");
-            // Ölüm animasyonu vs.
+            Debug.Log("Mental health bitti. Respawn ediliyor.");
+            if (respawn != null)
+            {
+                respawn.Respawn();
+                currentMentalHealth = maxMentalHealth;
+                UpdateHealthBar();
+            }
         }
+    }
+
+    public void IncreaseMentalHealth(float amount)
+    {
+        currentMentalHealth += amount;
+        currentMentalHealth = Mathf.Clamp(currentMentalHealth, 0f, maxMentalHealth);
+        UpdateHealthBar();
     }
 
     void UpdateHealthBar()
     {
         if (healthBarFill != null)
         {
-            float fillAmount = currentMentalHealth / maxMentalHealth;
-            healthBarFill.fillAmount = fillAmount;
+            healthBarFill.fillAmount = currentMentalHealth / maxMentalHealth;
         }
     }
 }
