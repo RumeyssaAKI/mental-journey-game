@@ -135,3 +135,79 @@ Henüz oynanabilir demo yok ancak:
 - İletişim ve proje takibi araçları (WhatsApp, Trello) aktif kullanıma başlandı.
 
 
+## Sprint 2
+
+**Sprint içinde tamamlanması tahmin edilen puan:** 12 Puan
+
+---
+
+### Daily Scrum
+
+Daily Scrum toplantıları WhatsApp üzerinden yazılı olarak gerçekleştirilmiştir.  
+
+---
+
+### Tamamlanan İşler (Toplam: 12 Puan)
+
+- **Mental Health Sistemi:** Oyuncunun zihinsel sağlığına göre oyun dinamiklerinin değişmesini sağlayan sistem.  
+- **Death Zones:** Oyuncuya anlık veya zamanla hasar veren bölgelerin entegre edilmesi.  
+- **Işık Altında İyileşme:** Oyuncunun ışık altında zamanla iyileşmesini sağlayan mekanik.  
+- **Checkpoint Sistemi:** Oyuncunun ölüm sonrası doğacağı kontrol noktalarının tanımlanması.  
+- **Toplanabilir Objeler:** Oyuncunun toplayabileceği nesneler aracılığıyla skor kazanması.  
+- **Skor Sistemi:** Toplanabilir objelerle entegre çalışan skor sistemi.  
+- **Hallucination Trigger:** Oyuncunun gerçek dünya algısını geçici olarak bozan sistem.  
+- **Mirror Enemy:** Halüsinasyon bölgesinde beliren, oyuncuyu takip eden ve hasar veren düşman (başlatıldı, henüz tamamlanmadı).  
+- **UI Güncellemeleri:** Skor, sağlık ve diğer önemli bilgilerin oyuncuya görsel olarak sunulması.  
+- **Anahtar-Kapı Sistemi:** Belirli nesneler aracılığıyla yeni alanlara geçişin sağlanması.
+
+---
+
+### Devam Eden / Eksik Kısımlar
+
+- **Bölüm Sistemi:** Belirli nesneler toplandığında bir sonraki bölüme geçiş yapılmasını sağlayacak yapı eksik.  
+- **Puzzle Mekanikleri:** Mental sağlığı doğrudan etkileyen bulmaca sistemleri ileriki sprintlerde geliştirilecek.  
+- **Cutscene / Hikaye Anlatımı:** Oyunun anlatımına derinlik katacak sahneler henüz entegre edilmedi.  
+- **Test & Balans:** Düşman hızı, hasar oranları ve iyileşme süresi gibi sistemlerin optimizasyonu devam ediyor.
+
+---
+
+### Sprint Board
+
+**Trello Sprint 2 Board Ekran Görüntüsü:**  
+<img width="1363" height="487" alt="Mental" src="https://github.com/user-attachments/assets/ba36ee94-0155-4d24-94f3-c672e66a843f" />
+
+
+---
+
+### Ürün Durumu – Ekran Görüntüleri
+
+- Mental Health barı  
+- Death Zones örnekleri  
+- Halüsinasyon bölgeleri ve trigger sistemi  
+- UI skor ve sağlık göstergeleri  
+_(Görseller eklenecek)_
+
+---
+
+### Sprint Review
+
+- Mental Health, skor, ışık, checkpoint gibi temel mekanikler başarıyla entegre edildi.  
+- Oyuncu deneyimini etkileyen interaktif alanlar geliştirildi.  
+- Mirror Enemy sistemi oluşturulmaya başlandı.  
+- UI sistemi sorunsuz şekilde çalışır hale getirildi.  
+- Henüz oynanabilir bir demo oluşturulmamış olsa da, altyapı büyük oranda hazırlandı.
+
+**Sprint Review Katılımcıları:**  
+ Rümeysa Aki, Feyza Ayca Taskesen
+
+---
+
+### Sprint Retrospective
+
+- Kritik oyun mekanikleri başarıyla tamamlandı.  
+- Mekanikler ve görsel dil arasında güçlü bir uyum sağlandı.  
+- Zaman planlaması ileriki sprintlerde iyileştirilecek.  
+- Puzzle ve bölüm geçiş sistemleri bir sonraki sprintin öncelikli konuları olacak.  
+- Test ve denge süreçlerinin daha sistematik yürütülmesine karar verildi.
+
+
