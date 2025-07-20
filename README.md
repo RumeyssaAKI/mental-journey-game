@@ -185,8 +185,10 @@ Daily Scrum toplantıları WhatsApp üzerinden yazılı olarak gerçekleştirilm
 - Death Zones örnekleri  
 - Halüsinasyon bölgeleri ve trigger sistemi  
 - UI skor ve sağlık göstergeleri  
+<img width="1065" height="741" alt="Screenshot 2025-07-21 003254" src="https://github.com/user-attachments/assets/3e75c1a3-368a-4502-b6c4-6de80fa004b0" />
 
 
+<img width="1015" height="775" alt="Screenshot 2025-07-21 003127" src="https://github.com/user-attachments/assets/931bed74-4244-4468-9ac1-da402cebee33" />
 
 ---
 
