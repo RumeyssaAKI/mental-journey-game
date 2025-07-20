@@ -10,10 +10,19 @@ public class HallucinationTrigger : MonoBehaviour
     public GameObject realWorldObjects;
     public Volume postProcessVolume;
 
+    public GameObject mirrorEnemyPrefab;
+    private GameObject spawnedEnemy;
+
+    public Transform player;
+
+    private Collider triggerCollider;
+
     private void Start()
     {
         if (postProcessVolume != null)
-            postProcessVolume.enabled = false;  // Ba?ta kapal?
+            postProcessVolume.enabled = false;
+
+        triggerCollider = GetComponent<Collider>();  // Trigger collider referans?
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +36,20 @@ public class HallucinationTrigger : MonoBehaviour
                 realWorldObjects.SetActive(false);
 
             if (postProcessVolume != null)
-                postProcessVolume.enabled = true;  // Efekti aç
+                postProcessVolume.enabled = true;
+
+            if (spawnedEnemy == null && mirrorEnemyPrefab != null && player != null)
+            {
+                Vector3 spawnPos = player.position - player.forward * 5f;
+                spawnedEnemy = Instantiate(mirrorEnemyPrefab, spawnPos, Quaternion.identity);
+
+                MirrorEnemy enemyScript = spawnedEnemy.GetComponent<MirrorEnemy>();
+                if (enemyScript != null)
+                {
+                    enemyScript.player = player;
+                    enemyScript.movementBoundary = triggerCollider;
+                }
+            }
         }
     }
 
@@ -42,7 +64,13 @@ public class HallucinationTrigger : MonoBehaviour
                 realWorldObjects.SetActive(true);
 
             if (postProcessVolume != null)
-                postProcessVolume.enabled = false;  // Efekti kapat
+                postProcessVolume.enabled = false;
+
+            if (spawnedEnemy != null)
+            {
+                Destroy(spawnedEnemy);
+                spawnedEnemy = null;
+            }
         }
     }
 }

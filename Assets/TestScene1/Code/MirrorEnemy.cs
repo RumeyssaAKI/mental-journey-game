@@ -1,52 +1,82 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class MirrorEnemy : MonoBehaviour
 {
     public Transform player;
-    public float followSpeed = 3f;
-    public float distanceThreshold = 15f;
-    public float mirrorDelay = 0.5f;
+    public Collider movementBoundary;  // Hareket s?n?r? alan? (trigger collider)
 
-    private float timer;
+    public float followDistance = 20f;
+    public float damageAmount = 5f;
+    public float damageInterval = 1f;
+
+    private NavMeshAgent agent;
+    private Renderer rend;
+    private MentalHealth playerMentalHealth;
+
+    private float damageTimer = 0f;
 
     void Start()
     {
-        if (player == null)
-            player = GameObject.FindGameObjectWithTag("Player").transform;
+        agent = GetComponent<NavMeshAgent>();
+        rend = GetComponent<Renderer>();
 
-        timer = mirrorDelay;
+        if (player != null)
+            playerMentalHealth = player.GetComponent<MentalHealth>();
+
+        if (rend != null)
+            rend.enabled = false; // Ba?lang?çta görünmez
     }
 
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
+        if (player == null || agent == null || movementBoundary == null)
+            return;
 
-        if (distance <= distanceThreshold)
+        // Oyuncu hareket s?n?r? içinde mi?
+        bool playerInBoundary = movementBoundary.bounds.Contains(player.position);
+
+        // Dü?man takip mesafesi içinde mi?
+        float distToPlayer = Vector3.Distance(transform.position, player.position);
+        bool inFollowRange = distToPlayer <= followDistance;
+
+        if (playerInBoundary && inFollowRange)
         {
-            timer -= Time.deltaTime;
+            // Görünür yap
+            if (rend != null && !rend.enabled)
+                rend.enabled = true;
 
-            if (timer <= 0f)
+            // Oyuncuyu takip et
+            agent.SetDestination(player.position);
+
+            // Hasar verme
+            damageTimer += Time.deltaTime;
+            if (damageTimer >= damageInterval)
             {
-                // X ve Z koordinatlar?n? yans?, Y sabit kals?n (zemin seviyesi)
-                Vector3 mirroredTarget = new Vector3(player.position.x, transform.position.y, player.position.z);
-                transform.position = Vector3.MoveTowards(transform.position, mirroredTarget, followSpeed * Time.deltaTime);
-                timer = mirrorDelay;
+                if (playerMentalHealth != null)
+                {
+                    playerMentalHealth.DecreaseMentalHealth(damageAmount);
+                }
+                damageTimer = 0f;
             }
         }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        else
         {
-            MentalHealth health = other.GetComponent<MentalHealth>();
-            if (health != null)
+            // Görünmez yap
+            if (rend != null && rend.enabled)
+                rend.enabled = false;
+
+            // Hareket s?n?r? içinde kalmas? için merkeze dön
+            if (!movementBoundary.bounds.Contains(transform.position))
             {
-                health.DecreaseMentalHealth(20f);
+                agent.SetDestination(movementBoundary.bounds.center);
+            }
+            else
+            {
+                agent.SetDestination(transform.position); // Dur
             }
         }
     }
 }
-

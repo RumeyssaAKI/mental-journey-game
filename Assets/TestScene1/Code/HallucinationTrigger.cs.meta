@@ -3,7 +3,12 @@ guid: 4da86ed88c2c85a45b97462387aa9cd6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hallucinationObjects: {instanceID: 0}
+  - realWorldObjects: {instanceID: 0}
+  - postProcessVolume: {instanceID: 0}
+  - mirrorEnemyPrefab: {instanceID: 0}
+  - player: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

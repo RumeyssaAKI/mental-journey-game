@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     private int jumpCount = 0;
     private bool isGrounded;
 
+    public bool isInLight = false; // ?? Oyuncu ???kta m??
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -19,23 +21,19 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Yerde olup olmad???n? kontrol et
         isGrounded = Physics.CheckSphere(groundCheck.position, groundCheckRadius, groundLayer);
 
-        // E?er yere temas varsa, z?plama say?s?n? s?f?rla
         if (isGrounded)
         {
             jumpCount = 0;
         }
 
-        // Space tu?una bas?ld???nda ve z?plama hakk? varsa z?pla
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < 2)
         {
             rb.velocity = new Vector3(rb.velocity.x, jumpForce, rb.velocity.z);
             jumpCount++;
         }
 
-        // Hareket kodu (iste?e göre düzenlenebilir)
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
