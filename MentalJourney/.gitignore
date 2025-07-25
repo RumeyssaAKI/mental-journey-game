@@ -1,0 +1,70 @@
+# === UNITY STANDART IGNORE ===
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+*.log
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unityproj
+*.sln
+*.tmp
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.blend1
+*.blend1.meta
+sysinfo.txt
+mono_crash.*
+crashlytics-build.properties
+
+# === JETBRAINS / VS ===
+.vs/
+.gradle/
+ExportedObj/
+.consulo/
+*.DotSettings.user
+
+# === PLATFORM-SPECIFIC BUILD OUTPUT ===
+*.apk
+*.aab
+*.app
+*.unitypackage
+*.unitypackage.meta
+
+# === UNITY GENERATED META FILES ===
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# === UNITY VISUAL SCRIPTING ===
+Assets/Unity.VisualScripting.Generated/
+
+# === UNITY ADDRESSABLES ===
+ServerData/
+Assets/StreamingAssets/aa*
+Assets/AddressableAssetsData/link.xml*
+Assets/Addressables_Temp*/
+Assets/AddressableAssetsData/*/*.bin*
+
+# === TEST SCENES ===
+Assets/InitTestScene*.unity*
+
+# === EKLENECEK ÖZEL KLASÖR ===
+# MentalJourney klasörü hariç tutulur (yani GIT'e dahil edilir)
+!MentalJourney/
+!MentalJourney/**
+
+# === OPSİYONEL: AssetStoreTools hariç tutulmak istenirse
+# Assets/AssetStoreTools*
