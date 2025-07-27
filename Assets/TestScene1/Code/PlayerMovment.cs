@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private int jumpCount = 0;
     private bool isGrounded;
 
-    public bool isInLight = false; // ?? Oyuncu ???kta m??
+    public bool isInLight = false; // <<< BURAYI EKLE
 
     void Start()
     {
