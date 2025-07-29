@@ -3,17 +3,24 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - HallucinationTrigger
+  - Ladder
+  - Pushble
+  - Key
+  - Collectible
+  - Humanoid
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Post Processing
+  - Pushable
+  - Climble
   - 
   - 
   - 
