@@ -8,49 +8,38 @@
 
 |    | <div align="center">Name</div>   | <div align="center">Title</div>  | <div align="center">Socials</div>     |
 | :-----------: | :---------- | :---------- | :----------: |
-|   Burak Onur Silusu     | Scrum Master      | 
-|   Feyza Ayca Taskesen     | Product Owner    | 
-|   Rumeysa Aki      | Developer      | 
+|   Feyza Ayça Taşkesen | Scrum Master | 
+|   Rumeysa Akı      | Product Owner   | 
 |   Enes Alyurt     | Developer     |  
 
 ---
 
 ## Oyun İsmi
 
-**Mental Journey**
-
----
+# Mental Journey
 
 ## Oyun Açıklaması
 
-**Mental Journey**, zihinsel sağlık ve farkındalık temalarını işleyen, derin ve anlamlı bir hikayeye sahip tek oyunculu bir macera/puzzle oyunudur. Oyuncular, ana karakterin zihinsel yolculuğunda çeşitli engelleri aşarak, travmalarını ve korkularını keşfeder ve aşar. Bulmacalar, metaforik öğeler ve interaktif görevlerle oyunculara hem eğlenceli hem de duygusal bir deneyim sunar.
-
----
+**Mental Journey**, zihinsel farkındalık teması etrafında şekillenen, kısa ve atmosferik bir keşif oyunudur. Oyuncu, bir karakterin içsel dünyasında gezinerek 5 anahtarı toplamakla görevlidir. Anahtarlar toplandığında park alanına giriş izni kazanılır. Oyunun belirli bir bölümünde, yalnızca halüsinasyon sırasında görünür olan nesnelerin yer aldığı özel bir halüsinasyon bölgesi bulunur. Bu mekanik, oyuncunun gerçeklik ve yanılsama arasındaki farkı deneyimlemesini sağlar.
 
 ## Oyun Hikayesi
 
-Ana karakterimiz, zihninde bastırılmış anılar ve karmaşık duygusal düğümlerle mücadele eden bir bireydir. Mental Journey’de oyuncular, bu karakterin zihinsel labirentlerinde ilerleyerek, onun korkuları, kaygıları ve umutları arasında gezinirler. Her bölüm, karakterin hayatındaki önemli bir anıyı ya da duyguyu temsil eder ve çözülmesi gereken bulmacalar aracılığıyla ilerleme sağlanır. Hikaye, oyunculara zihinsel sağlık konularında empati kurma ve farkındalık kazandırmayı amaçlar.
-
----
+Ana karakter, zihinsel bir boşlukta uyanır. Hafızası silik, hedefi belirsizdir. Çevresinde dağılmış 5 sembolik anahtar, onun zihinsel kilitlerini temsil eder. Her anahtar bir ilerleme, her adım bir farkındalık gibidir. Yolculuğun bir noktasında karakter, gerçekliği algılayamayacağı bir halüsinasyon bölgesine girer. Burada, sadece zihinle hissedilebilecek platformlar ve yollarla karşılaşır. Tüm anahtarlar toplandığında park alanı açılır ve karakter nihai farkındalığa ulaşır.
 
 ## Oyun Özellikleri
 
-- 3D low-poly grafikler  
-- Tek oyunculu deneyim  
-- Adventure & Puzzle türü  
-- Derin, hikaye odaklı anlatım  
-- Metaforik ve interaktif bulmacalar  
-- Atmosferik ses tasarımı ve müzik  
-- Zihinsel sağlık temalarını keşfeden özgün konsept  
-
----
+- 3D low-poly görsel stil  
+- Tek oyunculu keşif odaklı kısa deneyim  
+- Anahtar toplama ve alan açma mekaniği  
+- Halüsinasyon bölgesine özgü gizli platformlar  
+- Atmosferik ve sessiz bir anlatım biçimi  
 
 ## Hedef Kitle
 
-- Bağımsız oyun severler (Indie players)  
-- Hikaye ve duygu odaklı oyunları sevenler  
-- Puzzle ve keşif oyunlarına ilgi duyan 13 yaş ve üzeri oyuncular  
-- Zihinsel sağlık farkındalığına önem veren bireyler  
+- Bağımsız oyun deneyimlerine ilgi duyan oyuncular  
+- Zihinsel sağlık ve sembolik anlatımı deneyimlemek isteyenler  
+- Kısa sürede tamamlanabilir anlamlı oyunlar arayanlar  
+- 13 yaş ve üzeri her oyuncu kitlesi  
 
 ---
 
@@ -213,4 +202,71 @@ Daily Scrum toplantıları WhatsApp üzerinden yazılı olarak gerçekleştirilm
 - Puzzle ve bölüm geçiş sistemleri bir sonraki sprintin öncelikli konuları olacak.  
 - Test ve denge süreçlerinin daha sistematik yürütülmesine karar verildi.
 
+## Sprint 3
 
+**Sprint içinde tamamlanması tahmin edilen puan:** 20 Puan
+
+---
+
+### Daily Scrum
+
+Daily Scrum toplantıları WhatsApp grubu üzerinden yazılı ve Zoomdan toplantı olarak gerçekleştirilmiştir. 
+
+---
+
+### Tamamlanan İşler (Toplam: 20 Puan)
+
+- **Halüsinasyon Bölgesi Sistemi (6 puan)**  
+  Oyuncunun belirli alanlara girdiğinde yalnızca bu modda görülebilen özel yollar ve platformlar ortaya çıkmaktadır. Gerçeklik algısını bozan bu sistemle, oyun atmosferine farklı bir boyut katılmıştır.
+
+- **Anahtar Toplama Sistemi (5 puan)**  
+  Oyuncu sahneye yerleştirilmiş olan anahtarları toplayarak ilerleme sağlar. Toplanan her anahtar sayılır ve sistem üzerinden takip edilir.
+
+- **Park Alanı Giriş Kontrolü (4 puan)**  
+  Oyuncu yeterli sayıda (5) anahtar toplamadıysa park alanına giriş yapamaz. Giriş denemesi yapıldığında oyuncu geriye itilmekte; yeterli anahtar varsa bariyer kaldırılarak geçiş sağlanmaktadır.
+
+- **Karakter ve Animasyonların Entegrasyonu (3 puan)**  
+  Oyunun oynanabilir karakteri ve onun yürüme, koşma, zıplama gibi animasyonları Unity Animator aracılığıyla projeye entegre edilmiştir.
+
+- **Hata Kontrolleri & Oynanış Testleri (2 puan)**  
+  Anahtar sistemi, collider yapıları ve trigger alanları test edilerek mekaniklerin doğru çalıştığı doğrulanmıştır. Karakterin fiziksel etkileşimleri optimize edilmiştir.
+
+---
+
+### Sprint Board
+
+**Trello Sprint 3 Board Ekran Görüntüsü:**  
+
+<img width="1366" height="491" alt="Trelloı" src="https://github.com/user-attachments/assets/a9afb059-0f32-4fe4-bb52-47dd3ecd1103" />
+
+---
+
+### Ürün Durumu: Ekran Görüntüleri:
+
+<img width="809" height="379" alt="Oyun1" src="https://github.com/user-attachments/assets/16deb677-d677-493b-8713-dd26dc127259" />
+
+<img width="1109" height="538" alt="Oyun2" src="https://github.com/user-attachments/assets/7dcccc84-ccd9-4426-81b7-b55f5abff833" />
+
+<img width="1109" height="543" alt="Oyun3ı" src="https://github.com/user-attachments/assets/6884fc9c-2f2d-4024-9477-2c8ac6b0e863" />
+
+<img width="856" height="535" alt="Oyun4" src="https://github.com/user-attachments/assets/53718f94-2082-412e-9b58-dba3bf8d6690" />
+
+
+---
+
+### Sprint Review
+
+- Halüsinasyon sistemi başarıyla eklendi ve test edildi.  
+- Anahtar toplama sistemi eksiksiz çalışmaktadır.  
+- Park alanı geçiş kontrolü, oyuncu etkileşimiyle aktif hale getirildi.  
+- Karakter animasyonları düzgün şekilde çalışmakta ve oynanış deneyimini güçlendirmektedir.  
+- Test ve hata ayıklama süreciyle birlikte oynanabilir demo seviyesine gelindi.
+
+---
+
+### Sprint Retrospective
+
+- Collider, trigger ve transform bazlı kontroller netleştirildi.  
+- Mekanikler arası etkileşim uyumlu hale getirildi.  
+- Geri bildirimler doğrultusunda karakterin fiziksel tepkileri iyileştirildi.  
+- Sprint kapsamında hedeflenen tüm görevler zamanında ve beklenen kaliteyle tamamlandı.
