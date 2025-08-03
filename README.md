@@ -16,40 +16,30 @@
 
 ## Oyun İsmi
 
-**Mental Journey**
-
----
+# Mental Journey
 
 ## Oyun Açıklaması
 
-**Mental Journey**, zihinsel sağlık ve farkındalık temalarını işleyen, derin ve anlamlı bir hikayeye sahip tek oyunculu bir macera/puzzle oyunudur. Oyuncular, ana karakterin zihinsel yolculuğunda çeşitli engelleri aşarak, travmalarını ve korkularını keşfeder ve aşar. Bulmacalar, metaforik öğeler ve interaktif görevlerle oyunculara hem eğlenceli hem de duygusal bir deneyim sunar.
-
----
+**Mental Journey**, zihinsel farkındalık teması etrafında şekillenen, kısa ve atmosferik bir keşif oyunudur. Oyuncu, bir karakterin içsel dünyasında gezinerek 5 anahtarı toplamakla görevlidir. Anahtarlar toplandığında park alanına giriş izni kazanılır. Oyunun belirli bir bölümünde, yalnızca halüsinasyon sırasında görünür olan nesnelerin yer aldığı özel bir halüsinasyon bölgesi bulunur. Bu mekanik, oyuncunun gerçeklik ve yanılsama arasındaki farkı deneyimlemesini sağlar.
 
 ## Oyun Hikayesi
 
-Ana karakterimiz, zihninde bastırılmış anılar ve karmaşık duygusal düğümlerle mücadele eden bir bireydir. Mental Journey’de oyuncular, bu karakterin zihinsel labirentlerinde ilerleyerek, onun korkuları, kaygıları ve umutları arasında gezinirler. Her bölüm, karakterin hayatındaki önemli bir anıyı ya da duyguyu temsil eder ve çözülmesi gereken bulmacalar aracılığıyla ilerleme sağlanır. Hikaye, oyunculara zihinsel sağlık konularında empati kurma ve farkındalık kazandırmayı amaçlar.
-
----
+Ana karakter, zihinsel bir boşlukta uyanır. Hafızası silik, hedefi belirsizdir. Çevresinde dağılmış 5 sembolik anahtar, onun zihinsel kilitlerini temsil eder. Her anahtar bir ilerleme, her adım bir farkındalık gibidir. Yolculuğun bir noktasında karakter, gerçekliği algılayamayacağı bir halüsinasyon bölgesine girer. Burada, sadece zihinle hissedilebilecek platformlar ve yollarla karşılaşır. Tüm anahtarlar toplandığında park alanı açılır ve karakter nihai farkındalığa ulaşır.
 
 ## Oyun Özellikleri
 
-- 3D low-poly grafikler  
-- Tek oyunculu deneyim  
-- Adventure & Puzzle türü  
-- Derin, hikaye odaklı anlatım  
-- Metaforik ve interaktif bulmacalar  
-- Atmosferik ses tasarımı ve müzik  
-- Zihinsel sağlık temalarını keşfeden özgün konsept  
-
----
+- 3D low-poly görsel stil  
+- Tek oyunculu keşif odaklı kısa deneyim  
+- Anahtar toplama ve alan açma mekaniği  
+- Halüsinasyon bölgesine özgü gizli platformlar  
+- Atmosferik ve sessiz bir anlatım biçimi  
 
 ## Hedef Kitle
 
-- Bağımsız oyun severler (Indie players)  
-- Hikaye ve duygu odaklı oyunları sevenler  
-- Puzzle ve keşif oyunlarına ilgi duyan 13 yaş ve üzeri oyuncular  
-- Zihinsel sağlık farkındalığına önem veren bireyler  
+- Bağımsız oyun deneyimlerine ilgi duyan oyuncular  
+- Zihinsel sağlık ve sembolik anlatımı deneyimlemek isteyenler  
+- Kısa sürede tamamlanabilir anlamlı oyunlar arayanlar  
+- 13 yaş ve üzeri her oyuncu kitlesi  
 
 ---
 
