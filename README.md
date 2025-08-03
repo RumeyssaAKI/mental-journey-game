@@ -8,9 +8,8 @@
 
 |    | <div align="center">Name</div>   | <div align="center">Title</div>  | <div align="center">Socials</div>     |
 | :-----------: | :---------- | :---------- | :----------: |
-|   Burak Onur Silusu     | Scrum Master      | 
-|   Feyza Ayca Taskesen     | Product Owner    | 
-|   Rumeysa Aki      | Developer      | 
+|   Feyza Ayça Taşkesen | Scrum Master | 
+|   Rumeysa Akı      | Product Owner   | 
 |   Enes Alyurt     | Developer     |  
 
 ---
@@ -213,4 +212,71 @@ Daily Scrum toplantıları WhatsApp üzerinden yazılı olarak gerçekleştirilm
 - Puzzle ve bölüm geçiş sistemleri bir sonraki sprintin öncelikli konuları olacak.  
 - Test ve denge süreçlerinin daha sistematik yürütülmesine karar verildi.
 
+## Sprint 3
 
+**Sprint içinde tamamlanması tahmin edilen puan:** 20 Puan
+
+---
+
+### Daily Scrum
+
+Daily Scrum toplantıları WhatsApp grubu üzerinden yazılı ve Zoomdan toplantı olarak gerçekleştirilmiştir. 
+
+---
+
+### Tamamlanan İşler (Toplam: 20 Puan)
+
+- **Halüsinasyon Bölgesi Sistemi (6 puan)**  
+  Oyuncunun belirli alanlara girdiğinde yalnızca bu modda görülebilen özel yollar ve platformlar ortaya çıkmaktadır. Gerçeklik algısını bozan bu sistemle, oyun atmosferine farklı bir boyut katılmıştır.
+
+- **Anahtar Toplama Sistemi (5 puan)**  
+  Oyuncu sahneye yerleştirilmiş olan anahtarları toplayarak ilerleme sağlar. Toplanan her anahtar sayılır ve sistem üzerinden takip edilir.
+
+- **Park Alanı Giriş Kontrolü (4 puan)**  
+  Oyuncu yeterli sayıda (5) anahtar toplamadıysa park alanına giriş yapamaz. Giriş denemesi yapıldığında oyuncu geriye itilmekte; yeterli anahtar varsa bariyer kaldırılarak geçiş sağlanmaktadır.
+
+- **Karakter ve Animasyonların Entegrasyonu (3 puan)**  
+  Oyunun oynanabilir karakteri ve onun yürüme, koşma, zıplama gibi animasyonları Unity Animator aracılığıyla projeye entegre edilmiştir.
+
+- **Hata Kontrolleri & Oynanış Testleri (2 puan)**  
+  Anahtar sistemi, collider yapıları ve trigger alanları test edilerek mekaniklerin doğru çalıştığı doğrulanmıştır. Karakterin fiziksel etkileşimleri optimize edilmiştir.
+
+---
+
+### Sprint Board
+
+**Trello Sprint 3 Board Ekran Görüntüsü:**  
+
+<img width="1366" height="491" alt="Trelloı" src="https://github.com/user-attachments/assets/a9afb059-0f32-4fe4-bb52-47dd3ecd1103" />
+
+---
+
+### Ürün Durumu: Ekran Görüntüleri:
+
+<img width="809" height="379" alt="Oyun1" src="https://github.com/user-attachments/assets/16deb677-d677-493b-8713-dd26dc127259" />
+
+<img width="1109" height="538" alt="Oyun2" src="https://github.com/user-attachments/assets/7dcccc84-ccd9-4426-81b7-b55f5abff833" />
+
+<img width="1109" height="543" alt="Oyun3ı" src="https://github.com/user-attachments/assets/6884fc9c-2f2d-4024-9477-2c8ac6b0e863" />
+
+<img width="856" height="535" alt="Oyun4" src="https://github.com/user-attachments/assets/53718f94-2082-412e-9b58-dba3bf8d6690" />
+
+
+---
+
+### Sprint Review
+
+- Halüsinasyon sistemi başarıyla eklendi ve test edildi.  
+- Anahtar toplama sistemi eksiksiz çalışmaktadır.  
+- Park alanı geçiş kontrolü, oyuncu etkileşimiyle aktif hale getirildi.  
+- Karakter animasyonları düzgün şekilde çalışmakta ve oynanış deneyimini güçlendirmektedir.  
+- Test ve hata ayıklama süreciyle birlikte oynanabilir demo seviyesine gelindi.
+
+---
+
+### Sprint Retrospective
+
+- Collider, trigger ve transform bazlı kontroller netleştirildi.  
+- Mekanikler arası etkileşim uyumlu hale getirildi.  
+- Geri bildirimler doğrultusunda karakterin fiziksel tepkileri iyileştirildi.  
+- Sprint kapsamında hedeflenen tüm görevler zamanında ve beklenen kaliteyle tamamlandı.
