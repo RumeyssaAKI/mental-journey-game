@@ -8,14 +8,15 @@ public class GameManager : MonoBehaviour
 
     private Vector3 currentCheckpoint;
 
+    private int keyCount = 0;  // Anahtar sayýsýný tutan deðiþken
+
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-
-            currentCheckpoint = Vector3.zero; // Ba?lang?ç pozisyonu (de?i?tirilebilir)
+            currentCheckpoint = Vector3.zero;
         }
         else
         {
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // CHECKPOINT
     public void SetCheckpoint(Vector3 newCheckpoint)
     {
         currentCheckpoint = newCheckpoint;
@@ -31,6 +33,18 @@ public class GameManager : MonoBehaviour
     public Vector3 GetCheckpoint()
     {
         return currentCheckpoint;
+    }
+
+    // ANAHTAR SÝSTEMÝ
+    public void AddKey()
+    {
+        keyCount++;
+        Debug.Log("Anahtar alýndý! Toplam anahtar: " + keyCount);
+    }
+
+    public int GetKeyCount()
+    {
+        return keyCount;
     }
 }
 

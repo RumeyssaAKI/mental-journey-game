@@ -6,14 +6,16 @@ using UnityEngine.Rendering.Universal;
 
 public class HallucinationTrigger : MonoBehaviour
 {
-    public GameObject hallucinationObjects;
-    public GameObject realWorldObjects;
-    public Volume postProcessVolume;
+    public GameObject hallucinationObjects;   // Halüsinasyonda aktif olacak nesneler
+    public GameObject realWorldObjects;       // Normal dünyada aktif olan nesneler
+    public Volume postProcessVolume;           // Post-processing efekti
 
-    public GameObject mirrorEnemyPrefab;
+    public GameObject mirrorEnemyPrefab;      // Spawn edilecek düþman prefabý
     private GameObject spawnedEnemy;
 
-    public Transform player;
+    public Transform player;                   // Oyuncunun Transform'u
+
+    public GameObject rainEffect;              // Yaðmur efekti
 
     private Collider triggerCollider;
 
@@ -22,7 +24,10 @@ public class HallucinationTrigger : MonoBehaviour
         if (postProcessVolume != null)
             postProcessVolume.enabled = false;
 
-        triggerCollider = GetComponent<Collider>();  // Trigger collider referans?
+        if (rainEffect != null)
+            rainEffect.SetActive(false);
+
+        triggerCollider = GetComponent<Collider>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -37,6 +42,9 @@ public class HallucinationTrigger : MonoBehaviour
 
             if (postProcessVolume != null)
                 postProcessVolume.enabled = true;
+
+            if (rainEffect != null)
+                rainEffect.SetActive(true);
 
             if (spawnedEnemy == null && mirrorEnemyPrefab != null && player != null)
             {
@@ -65,6 +73,9 @@ public class HallucinationTrigger : MonoBehaviour
 
             if (postProcessVolume != null)
                 postProcessVolume.enabled = false;
+
+            if (rainEffect != null)
+                rainEffect.SetActive(false);
 
             if (spawnedEnemy != null)
             {
